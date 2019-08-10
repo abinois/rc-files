@@ -1,3 +1,6 @@
+PROMPT='%F{green}%n %F{magenta}%B%~%b > '
+RPROMPT='🦀 '
+
 alias norm="norminette -R CheckForbiddenSourceHeader"
 alias gccf="gcc -Wall -Werror -Wextra"
 
@@ -13,6 +16,7 @@ alias lr="ls -RG"
 alias la="ls -aG"
 alias lla="ls -laG"
 
+alias mk="make"
 alias mfc="make fclean"
 alias mc="make clean"
 
