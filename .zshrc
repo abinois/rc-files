@@ -70,9 +70,6 @@ zstyle ':completion:*:messages' format $'%F{yellow}%d'
 zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]'
 zstyle ':completion:*:warnings' format '%F{red}No match'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %s
-zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
-#zstyle ':completion:*:*: kill :*:processes' list-colors '=(#b) #([0-9]#)*=29=34'
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=01;31=0=01'
 zstyle ':completion:*:*' group-order local-directories executable-files aliases builtins 
 
 # O P T I O N S
