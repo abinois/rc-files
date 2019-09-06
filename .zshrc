@@ -18,7 +18,7 @@ alias gccf="gcc -Wall -Werror -Wextra"				   # for 42
 
 alias ..="cd .."									   # go to parent directory
 alias ...="cd ../.."								   # go to grand-parent
-alias p="pwd"										   # show path
+alias="pwd"										   # show path
 alias v="vim"
 alias 4e="cat -e"									   # show special characters
 export GREP_COLOR=32  					               # green
@@ -65,7 +65,7 @@ zstyle ':completion:*' verbose yes					# active informations
 zstyle ':completion:*' auto-description 			# gives info on command flags
 zstyle ':completion:*' group-name ''				# show tags groups
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors 'di=01;34'				 # tags color blue
+zstyle ':completion:*:default' list-colors 'di=38;5;208'	# tags color
 zstyle ':completion:*:messages' format $'%F{yellow}%d'
 zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]'
 zstyle ':completion:*:warnings' format '%F{red}No match'

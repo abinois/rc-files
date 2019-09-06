@@ -20,10 +20,21 @@ set shiftwidth=4
 
 syntax on
 set cc=81
-hi ColorColumn ctermbg=darkgrey
 set cursorline
-hi CursorLineNR ctermbg=darkgreen ctermfg=black
 set incsearch
+hi ColorColumn ctermbg=darkgrey
+hi CursorLineNR ctermbg=magenta ctermfg=blue
+hi Pmenu ctermbg=black ctermfg=yellow
+hi PmenuSel ctermbg=black ctermfg=magenta
+hi PmenuSbar ctermbg=black
+hi PmenuThumb ctermbg=magenta
+hi ModeMsg ctermfg=green ctermbg=black
+hi Visual ctermfg=green
+hi LineNR ctermfg=blue
+hi Comment ctermfg=darkgrey
+hi MatchParen ctermbg=black ctermfg=green
+hi Vertsplit ctermfg=magenta
+hi NonText ctermfg=magenta
 
 " Shortcuts Escape Mode -----------
 
@@ -43,7 +54,7 @@ inoremap (( ()<left>
 inoremap [[ []<left>
 inoremap "" ""<left>
 inoremap '' ''<left>
-inoremap ## #include
+"inoremap ## #include
 inoremap {{ {}<left><cr><up><right><cr>
 inoremap <F10> int<tab><tab>main(int ac, char **av)<cr>{}<left><cr><up><right><cr>return (0);<up><cr>
 inoremap <F8> if (!(= (*)malloc(sizeof())))<cr>return (NULL);<up><esc>^<right><right><right><right><right>a
