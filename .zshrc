@@ -25,9 +25,9 @@ export GREP_COLOR=32  					               # green
 alias grep="grep --color=always -Hn"	               # color, file, line
 
 # -- B I N D K E Y --
-bindkey '^A'      beginning-of-line					   # go to the beginning
-bindkey '^Z'      end-of-line						   # go to th end
-bindkey '^D'      delete-char						   # delete the char pointed
+bindkey '^a'      beginning-of-line					   # go to the beginning
+bindkey '^z'      end-of-line						   # go to th end
+bindkey '^d'      delete-char						   # delete the char pointed
 bindkey "^[[A" history-beginning-search-backward       # move up in history
 bindkey "^[[B" history-beginning-search-forward        # move down in history
 

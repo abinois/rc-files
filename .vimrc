@@ -38,12 +38,12 @@ hi NonText ctermfg=magenta
 
 " Shortcuts Escape Mode -----------
 
-nmap æ ^
-nmap Â $
+nmap œ ^
+nmap ∑ $
 nmap h :nohl<cr>
 nmap - <esc>ci(
-nmap ‡ dd<up><up>$p
-nmap ‹ dd$p
+nmap å dd<up><up>$p
+nmap Ω dd$p
 nmap // ^i<left><left>//<esc><esc>
 nmap \\ ^i<left><left><del><del><esc><esc>
 nmap S ^iif (!(<esc>$a))<cr>return (NULL);<esc>
