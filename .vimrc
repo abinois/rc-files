@@ -23,7 +23,7 @@ set cc=81
 set cursorline
 set incsearch
 hi ColorColumn ctermbg=darkgrey
-hi CursorLineNR ctermbg=magenta ctermfg=blue
+hi CursorLineNR ctermbg=magenta ctermfg=black
 hi Pmenu ctermbg=black ctermfg=yellow
 hi PmenuSel ctermbg=black ctermfg=magenta
 hi PmenuSbar ctermbg=black
@@ -62,4 +62,4 @@ inoremap <F2> #ifndef <cr># define<cr><cr>#endif<up><up><up><esc>$i<left>
 
 " Shortcuts Visual Mode ------------
 
-vnoremap ** <esc>>a<cr>*/<esc><i<cr><up>/*
+vnoremap ** <esc>`>a<cr>*/<esc>`<i<cr><up>/* 
