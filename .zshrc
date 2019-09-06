@@ -5,11 +5,17 @@
 #					  ------       /  /       ||  ||                           #
 ################################################################################
 
-print -Pn "\e]0;_-*-_ Z S H _-*-_\a"                   # change window header
-autoload -U colors && colors						   # load colors
+print -Pn "\e]0;💤💰🏨\a"                   # change window header
+autoload -U colors && colors				# load colors
+
 # -- P R O M P T --
-PROMPT='%F{green}%n %F{reset_color}%F{magenta}%B%~%b%F{reset_color} • '
-RPROMPT='[%F{green}%T%F{reset_color}]'			       # right promt, show time
+
+autoload -Uz vcs_info                       # Load version control information
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '[%F{red}%b%f]'  #format for git branch
+setopt PROMPT_SUBST
+PROMPT='%F{green}%n %f%F{magenta}%~%f  '
+RPROMPT='${vcs_info_msg_0_}[%F{yellow}%w%f/%F{green}%T%f]'
 
 # - - - - - - - - - - - - - - - - - A L I A S - - - - - - - - - - - - - - - - -
 
@@ -56,6 +62,7 @@ autoload -U compinit
 compinit
 zmodload -i zsh/complist									# load completion
 
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=2    					# active menu
 zstyle ':completion:*:kill:*' force-list always				# force show menu
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 	# case insensitive
@@ -64,8 +71,7 @@ zstyle ':completion:*' rehash true					# hashes before completion
 zstyle ':completion:*' verbose yes					# active informations
 zstyle ':completion:*' auto-description 			# gives info on command flags
 zstyle ':completion:*' group-name ''				# show tags groups
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:default' list-colors 'di=38;5;208'	# tags color
+zstyle ':completion:*:default' list-colors 'di=38;5;226'	# tags color
 zstyle ':completion:*:messages' format $'%F{yellow}%d'
 zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]'
 zstyle ':completion:*:warnings' format '%F{red}No match'

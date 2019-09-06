@@ -32,19 +32,20 @@ syntax on
 set cc=81
 set cursorline
 set incsearch
-hi ColorColumn ctermbg=darkgrey
-hi CursorLineNR ctermbg=magenta ctermfg=black
-hi Pmenu ctermbg=black ctermfg=yellow
-hi PmenuSel ctermbg=black ctermfg=magenta
-hi PmenuSbar ctermbg=black
-hi PmenuThumb ctermbg=magenta
-hi ModeMsg ctermfg=green ctermbg=black
-hi Visual ctermfg=green
-hi LineNR ctermfg=blue
-hi Comment ctermfg=darkgrey
-hi MatchParen ctermbg=black ctermfg=green
-hi Vertsplit ctermfg=magenta
-hi NonText ctermfg=magenta
+hi ColorColumn	ctermbg=darkgrey
+hi CursorLineNR	ctermbg=magenta ctermfg=black
+hi Pmenu		ctermbg=black ctermfg=yellow
+hi PmenuSel		ctermbg=black ctermfg=magenta
+hi PmenuSbar	ctermbg=black
+hi PmenuThumb	ctermbg=magenta
+hi ModeMsg		ctermfg=green ctermbg=black
+hi Visual		ctermfg=green
+hi LineNR		ctermfg=blue
+hi Comment		ctermfg=darkgrey
+hi MatchParen	ctermbg=black ctermfg=green
+hi Vertsplit	ctermfg=magenta
+hi NonText		ctermfg=magenta
+hi WildMenu		ctermfg=magenta ctermbg=black
 
 " Escape/Normal Mode -----------
 
