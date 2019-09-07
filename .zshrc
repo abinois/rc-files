@@ -14,8 +14,21 @@ autoload -Uz vcs_info                       # Load version control information
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '[%F{red}%b%f]'  #format for git branch
 setopt PROMPT_SUBST
-PROMPT='%F{green}%n %f%F{magenta}%~%f  '
+PROMPT='%F{green}%U%n%u %f: %F{magenta}%B%%b~%f  '
 RPROMPT='${vcs_info_msg_0_}[%F{yellow}%w%f/%F{green}%T%f]'
+
+# -- B I N D K E Y --
+bindkey '^a'	beginning-of-line					   	# go to the beginning
+bindkey '^z'	end-of-line						   		# go to the end
+bindkey '^d'	delete-char						   		# delete pointed char
+bindkey '^w'	backward-kill-word						# kill word
+bindkey '^b'	backward-word							# go to previous word
+bindkey '^n'	forward-word							# got to next word
+bindkey '^y'	yank									# paste the killed buf
+bindkey 'ESC-l'	down-case-word							# lower-case the char
+bindkey 'ESC-c'	capitalize-word							# upper-case the char
+bindkey "^[[A"	history-beginning-search-backward       # move up in history
+bindkey "^[[B"	history-beginning-search-forward        # move down in history
 
 # - - - - - - - - - - - - - - - - - A L I A S - - - - - - - - - - - - - - - - -
 
@@ -29,13 +42,6 @@ alias v="vim"
 alias 4e="cat -e"									   # show special characters
 export GREP_COLOR=32  					               # green
 alias grep="grep --color=always -Hn"	               # color, file, line
-
-# -- B I N D K E Y --
-bindkey '^a'      beginning-of-line					   # go to the beginning
-bindkey '^z'      end-of-line						   # go to th end
-bindkey '^d'      delete-char						   # delete the char pointed
-bindkey "^[[A" history-beginning-search-backward       # move up in history
-bindkey "^[[B" history-beginning-search-forward        # move down in history
 
 # -- G I T --
 
