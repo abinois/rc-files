@@ -78,9 +78,9 @@ zstyle ':completion:*' verbose yes					# active informations
 zstyle ':completion:*' auto-description 			# gives info on command flags
 zstyle ':completion:*' group-name ''				# show tags groups
 zstyle ':completion:*:default' list-colors 'di=38;5;226'	# tags color
-zstyle ':completion:*:messages' format $'%F{yellow}%d'
-zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]'
-zstyle ':completion:*:warnings' format '%F{red}No match'
+zstyle ':completion:*:messages' format $'%F{yellow}%d%f'
+zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]%f'
+zstyle ':completion:*:warnings' format '%F{red}No match%f'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %s
 zstyle ':completion:*:*' group-order local-directories executable-files aliases builtins 
 
