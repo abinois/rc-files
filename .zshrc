@@ -14,7 +14,7 @@ autoload -Uz vcs_info                       # Load version control information
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '[%F{red}%b%f]'  #format for git branch
 setopt PROMPT_SUBST
-PROMPT='%F{green}%U%n%u %f: %F{magenta}%B%%b~%f  '
+PROMPT='%F{green}%U%n%u %f: %F{magenta}%B%~%b%f  '
 RPROMPT='${vcs_info_msg_0_}[%F{yellow}%w%f/%F{green}%T%f]'
 
 # -- B I N D K E Y --
