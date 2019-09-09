@@ -63,6 +63,10 @@ alias mfc="make fclean"								   # rm .o, .d and binary
 alias mc="make clean"								   # rm .o and .d
 alias mk="make"										   # compile
 
+# -- SCRIPTS --
+
+alias sms="~/Scripts/sms_me.sh"
+
 # - - - - - - - - - - - -  - - C O M P L E T I O N - - - - - - - - - - - - - - -
 autoload -U compinit
 compinit
