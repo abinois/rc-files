@@ -72,6 +72,12 @@ nmap <F8>		i<F8>
 
 " Insert Mode ------------
 
+imap <S-up>		<esc>:bp<return>
+imap <S-down>	<esc>:bn<return>
+imap <S-right>	<esc><C-w>w
+imap <S-left>	<esc><C-w>W
+imap œ			<esc>^i
+imap ∑			<esc>$i
 imap <C-c>		yyp
 inoremap ((		()<left>
 inoremap [[		[]<left>

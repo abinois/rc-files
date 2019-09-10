@@ -67,6 +67,12 @@ alias mk="make"										   # compile
 
 alias sms="~/Scripts/sms_me.sh"
 
+# -- VALGRIND --
+
+alias valgrind="~/.brew/bin/valgrind"
+alias val="~/.brew/bin/valgrind"
+alias valeaks="~/.brew/bin/valgrind --leak-check=full"
+
 # - - - - - - - - - - - -  - - C O M P L E T I O N - - - - - - - - - - - - - - -
 autoload -U compinit
 compinit
