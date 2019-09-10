@@ -53,10 +53,10 @@ alias gcm="git commit -m"							   # commit tracked files
 alias gpl="git pull"								   # pull from repository
 
 # -- L S --
-alias l="ls -G"										   # color
-alias lr="ls -RG"									   # recursive
-alias la="ls -aG"									   # show dot files
-alias ll="ls -lahG"									   # more infos
+alias l="ls -FG"										   # color
+alias lr="ls -RFG"									   # recursive
+alias la="ls -AFG"									   # show dot files
+alias ll="ls -lAhFG"									   # more infos
 
 # -- M A K E --
 alias mfc="make fclean"								   # rm .o, .d and binary
