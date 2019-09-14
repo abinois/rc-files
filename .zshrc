@@ -37,7 +37,7 @@ alias gccf="gcc -Wall -Werror -Wextra"				   # for 42
 
 alias ..="cd .."									   # go to parent directory
 alias ...="cd ../.."								   # go to grand-parent
-alias="pwd"										   # show path
+alias="pwd"											   # show path
 alias v="vim"
 alias 4e="cat -e"									   # show special characters
 export GREP_COLOR=32  					               # green
@@ -46,8 +46,10 @@ alias grep="grep --color=always -Hn"	               # color, file, line
 # -- G I T --
 
 alias gs="git status"							       # display tracked files
-alias ga="git add ."                                   # stage current directory
+alias ga="git add"									   # stage 
+alias gap="git add ."                                  # stage current directory
 alias gas="git add . && git status"					   # do both
+alias gall="git add -A && git status"				   # stage all files
 alias gcl="git clone"								   # clone repository
 alias gcm="git commit -m"							   # commit tracked files
 alias gpl="git pull"								   # pull from repository
