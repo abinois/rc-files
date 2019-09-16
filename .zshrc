@@ -33,11 +33,11 @@ bindkey "^[[B"	history-beginning-search-forward        # move down in history
 # - - - - - - - - - - - - - - - - - A L I A S - - - - - - - - - - - - - - - - -
 
 alias norm="norminette -R CheckForbiddenSourceHeader"  # for 42
-alias gccf="gcc -Wall -Werror -Wextra"				   # for 42
 
+alias gccf="gcc -Wall -Werror -Wextra"				   # compile with flags
 alias ..="cd .."									   # go to parent directory
 alias ...="cd ../.."								   # go to grand-parent
-alias="pwd"											   # show path
+alias p="pwd"										   # show path
 alias v="vim"
 alias 4e="cat -e"									   # show special characters
 export GREP_COLOR=32  					               # green
@@ -47,21 +47,21 @@ alias grep="grep --color=always -Hn"	               # color, file, line
 
 alias gs="git status"							       # display tracked files
 alias ga="git add"									   # stage 
-alias gap="git add ."                                  # stage current directory
-alias gas="git add . && git status"					   # do both
-alias gall="git add -A && git status"				   # stage all files
+alias gap="git add . && git status"                    # stage current directory
+alias gall="git add -A && git status"				   # stage all branch
 alias gcl="git clone"								   # clone repository
 alias gcm="git commit -m"							   # commit tracked files
 alias gpl="git pull"								   # pull from repository
+alias gph="git push"								   # push on branch
 
 # -- L S --
-alias l="ls -FG"										   # color
+alias l="ls -FG"									   # color
 alias lr="ls -RFG"									   # recursive
 alias la="ls -AFG"									   # show dot files
-alias ll="ls -lAhFG"									   # more infos
+alias ll="ls -lAhFG"							       # more infos
 
 # -- M A K E --
-alias mfc="make fclean"								   # rm .o, .d and binary
+alias mfc="make fclean"								   # rm .o, .d and exe
 alias mc="make clean"								   # rm .o and .d
 alias mk="make"										   # compile
 
@@ -73,7 +73,7 @@ alias sms="~/Scripts/sms_me.sh"
 
 alias valgrind="~/.brew/bin/valgrind"
 alias val="~/.brew/bin/valgrind"
-alias valeaks="~/.brew/bin/valgrind --leak-check=full"
+alias valeaks="~/.brew/bin/valgrind --leak-check=full" # checks leaks
 
 # - - - - - - - - - - - -  - - C O M P L E T I O N - - - - - - - - - - - - - - -
 autoload -U compinit
@@ -85,14 +85,14 @@ zstyle ':completion:*' menu select=2    					# active menu
 zstyle ':completion:*:kill:*' force-list always				# force show menu
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 	# case insensitive
 zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' rehash true					# hashes before completion
-zstyle ':completion:*' verbose yes					# active informations
-zstyle ':completion:*' auto-description 			# gives info on command flags
-zstyle ':completion:*' group-name ''				# show tags groups
+zstyle ':completion:*' rehash true							# hashes before completion
+zstyle ':completion:*' verbose yes							# active informations
+zstyle ':completion:*' auto-description 					# gives info on command flags
+zstyle ':completion:*' group-name ''						# show tags groups
 zstyle ':completion:*:default' list-colors 'di=38;5;226'	# tags color
 zstyle ':completion:*:messages' format $'%F{yellow}%d%f'
 zstyle ':completion:*:descriptions' format '%F{cyan}[ -> %d <- ]%f'
-zstyle ':completion:*:warnings' format '%F{red}No match%f'
+zstyle ':completion:*:warnings' format '%F{red}No match :(%f'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %s
 zstyle ':completion:*:*' group-order local-directories executable-files aliases builtins 
 
