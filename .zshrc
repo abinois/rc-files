@@ -20,7 +20,7 @@ RPROMPT='${vcs_info_msg_0_}[%F{yellow}%w%f/%F{green}%T%f]'
 # -- B I N D K E Y --
 bindkey '^a'	beginning-of-line					   	# go to the beginning
 bindkey '^z'	end-of-line						   		# go to the end
-bindkey '^d'	delete-char						   		# delete pointed char
+bindkey '^s'	delete-char						   		# delete pointed char
 bindkey '^w'	backward-kill-word						# kill word
 bindkey '^b'	backward-word							# go to previous word
 bindkey '^n'	forward-word							# got to next word
