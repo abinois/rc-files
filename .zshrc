@@ -5,6 +5,8 @@
 #					  ------       /  /       ||  ||                           #
 ################################################################################
 
+export PATH=/sgoinfre/goinfre/Perso/abinois/pythenv/bin:$PATH
+
 print -Pn "\e]0;💤💰🏨\a"                   # change window header
 autoload -U colors && colors				# load colors
 
