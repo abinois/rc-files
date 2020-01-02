@@ -69,6 +69,7 @@ nmap <F4>		i<F4>
 nmap <F10>		i<F10>
 nmap <F2>		i<F2>
 nmap <F8>		i<F8>
+nmap <F5>		i<F5>
 
 " Insert Mode ------------
 
@@ -86,8 +87,9 @@ inoremap ''		''<left>
 inoremap {{		{}<left><cr><up><right><cr>
 inoremap <F10>	int<tab><tab>main(int ac, char **av)<cr>{}<left><cr><up><right><cr>return (0);<up><cr>
 inoremap <F8>	if (!(= (*)malloc(sizeof())))<cr>return (0);<up><esc>^<right><right><right><right><right>a
-inoremap <F2>	#ifndef <cr># define<cr><cr>#endif<up><up><up><esc>$i<left>
-inoremap <F4>	ft_fili(__FILE__, __LINE__);<esc>
+imap <F2>	#ifndef <cr># define<cr><cr>#endif<up><up><up><esc>$i<left>
+imap <F4>	ft_fili(__FILE__, __LINE__);<esc>
+imap <F5>	#!/usr/bin/php<cr><left><del><?php<cr>?><left><left><cr><up>
 
 " Shortcuts Visual Mode ------------
 
