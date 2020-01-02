@@ -18,8 +18,8 @@ PROMPT='%F{green}%U%n%u %f: %F{magenta}%B%~%b%f  '
 RPROMPT='${vcs_info_msg_0_}[%F{yellow}%w%f/%F{green}%T%f]'
 
 # -- B I N D K E Y --
-bindkey '^a'	beginning-of-line					   	# go to the beginning
-bindkey '^z'	end-of-line						   		# go to the end
+#bindkey '^a'	beginning-of-line					   	# go to the beginning
+#bindkey '^z'	end-of-line						   		# go to the end
 bindkey '^s'	delete-char						   		# delete pointed char
 bindkey '^w'	backward-kill-word						# kill word
 bindkey '^b'	backward-word							# go to previous word
@@ -37,7 +37,6 @@ alias norm="norminette -R CheckForbiddenSourceHeader"  # for 42
 alias gccf="gcc -Wall -Werror -Wextra"				   # compile with flags
 alias ..="cd .."									   # go to parent directory
 alias ...="cd ../.."								   # go to grand-parent
-alias p="pwd"										   # show path
 alias v="vim"
 alias 4e="cat -e"									   # show special characters
 export GREP_COLOR=32  					               # green
@@ -74,6 +73,10 @@ alias sms="~/Scripts/sms_me.sh"
 alias valgrind="~/.brew/bin/valgrind"
 alias val="~/.brew/bin/valgrind"
 alias valeaks="~/.brew/bin/valgrind --leak-check=full" # checks leaks
+
+# -- PYTHON --
+alias python="python3.8"
+alias p="python3.8"
 
 # - - - - - - - - - - - -  - - C O M P L E T I O N - - - - - - - - - - - - - - -
 autoload -U compinit
